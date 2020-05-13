@@ -1,7 +1,7 @@
+import { ClientOptions } from '@elastic/elasticsearch';
 import { ModuleMetadata, Type } from '@nestjs/common/interfaces';
-import { ConfigOptions } from 'elasticsearch';
 
-export interface ElasticsearchModuleOptions extends ConfigOptions {}
+export type ElasticsearchModuleOptions = ClientOptions;
 
 export interface ElasticsearchOptionsFactory {
   createElasticsearchOptions():
